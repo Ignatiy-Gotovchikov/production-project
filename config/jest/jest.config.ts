@@ -2,7 +2,8 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
-
+import path from "path";
+  
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -30,16 +31,24 @@ export default {
     moduleDirectories: [
         "node_modules",
     ],
+    modulePaths: [
+        "<rootDir>src",
+    ],
     testMatch: [
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
     ],
     rootDir: "../../",
+
+    moduleNameMapper: {
+        "\\.s?css$": "identity-obj-proxy",
+        "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    // collectCoverageFrom: undefined,
+    // collectCoverageFrom: undefined, 
 
     // The directory where Jest should output its coverage files
     // coverageDirectory: undefined,
