@@ -3,7 +3,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import AppLink, { AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { LoginModal } from "features/AuthByUsername";
 import { useTranslation } from "react-i18next";
-import { Button } from "shared/ui/Button/Button";
+import { ButtonTheme , Button } from "shared/ui/Button/Button";
 import cls from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -26,7 +26,7 @@ const Navbar = ({ className }: NavbarProps) => {
     return(<div className={classNames(cls.navbar, {}, [className])}>
         <div className={cls.links}>
             <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
-                Главная
+                Главная 
             </AppLink>
 
             <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
@@ -34,7 +34,7 @@ const Navbar = ({ className }: NavbarProps) => {
             </AppLink>
 
             <Button
-                // theme={ButtonTheme.CLEAR_INVERTED}
+                theme={ButtonTheme.CLEAR_INVERTED}
                 className={cls.links}
                 onClick={onShowModal}
             >
