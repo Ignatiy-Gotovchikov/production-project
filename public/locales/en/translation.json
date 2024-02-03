@@ -8,5 +8,9 @@
 	"Войти": "Login",
 	"Короткий язык": "En",
 	"Главная": "Main",
-	"О сайте": "About us"
+	"О сайте": "About us",
+	"Вы ввели неверный логин или пароль": "You have entered an incorrect login or password",
+	"Форма авторизации": "Authorization form",
+	"Введите username": "Enter username",
+	"Введите пароль": "Enter password"
 }
