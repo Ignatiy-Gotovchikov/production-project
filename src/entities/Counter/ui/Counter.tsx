@@ -1,7 +1,7 @@
+/* eslint-disable i18next/no-literal-string */
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "shared/ui/Button/Button";
 import { counterActions } from "../modal/slice/counterSlice";
-import { CounterSchema } from "../modal/types/counterSchema";
 import { getCounterValue } from "../modal/selectors/getCounterValue/getCounterValue";
 
 const Counter = () => {
